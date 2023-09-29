@@ -1,0 +1,98 @@
+html, body,*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+.w100{
+  width: 100%;
+}
+.backwack{
+  -webkit-filter: grayscale(100%); 
+  -moz-filter: grayscale(100%); 
+  -ms-filter: grayscale(100%); 
+  -o-filter: grayscale(100%); 
+  filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);  
+  _filter:none; 
+}
+.max-box{
+  height: 200px;
+  width: 400px;
+  overflow-y: hidden;
+  position: relative;
+}
+.max-bgimg-0{
+  background: url('../img/popupBgimg/bgimg-0.jpg') no-repeat;
+  background-size: 100% 100% ;
+}
+.duck{
+  height: 40px;
+  width: 40px;
+  background: url('../img/duck.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 5px;
+  left: calc(0% - 20px);
+  transition: all 0.3s;
+  animation: duck 0.5s linear infinite alternate;
+  cursor: pointer;
+}
+@keyframes duck{
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+.duck:hover{
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s;
+}
+.roasted-duck{
+  height: 50px;
+  width: 50px;
+  background: url('../img/roasted.png') no-repeat;
+  background-size: 100% 100%;
+  bottom: 10px;
+}
+/* 进度条 */
+.seep-box{
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 6px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.seep-box>.seep-item{
+  background-image: linear-gradient(to right,#00f2fe, #4facfe);
+  height: 100%;
+  width: 0%;
+  transition: all 0.3s;
+}
+
+/* 按钮组 */
+.btn-list{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-list>.item{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-list>.item>img{
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-list>.item>img:hover{
+  width: 36px;
+  transition: all 0.2s;
+}

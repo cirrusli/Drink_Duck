@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "喝水鸭",
+	"version": "1.0",
+	"description": "咕噜咕噜……嘎嘎嘎",
+	"icons":{
+		"16": "./img/icon.png",
+		"48": "./img/icon.png",
+		"128": "./img/icon.png"
+	},
+  "browser_action":{
+		"default_icon": "./img/icon.png",
+		"default_title": "小鸭子觉得你应该多喝水！",
+		"default_popup": "./popup.html"
+	},
+	"background": {
+		"page": "./background.html"
+	},
+	"permissions": [
+		"notifications",
+		"webRequest", 
+		"webRequestBlocking", 
+		"https://www.coderutil.com/*",
+		"tabs"
+	]
+	
+}
